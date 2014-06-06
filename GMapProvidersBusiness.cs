@@ -2,7 +2,9 @@
 
 namespace GMap.NET.MapProviders.Google
 {
-
+    /// <summary>
+    /// Business GMap Providers
+    /// </summary>
     public static class GMapProvidersBusiness
     {
         public static readonly GoogleMapBusinessProvider GoogleMapBusiness = GoogleMapBusinessProvider.Instance;
@@ -10,6 +12,9 @@ namespace GMap.NET.MapProviders.Google
         public static readonly GoogleMapBusinessProvider GoogleMapHybridBusiness = GoogleHybridMapBusinessProvider.Instance;
         public static readonly GoogleMapBusinessProvider GoogleMapTerrainBusiness = GoogleTerrainMapBusinessProvider.Instance;
 
+        /// <summary>
+        /// Holds all Google Business Map Providers
+        /// </summary>
         public static GoogleMapBusinessProvider[] AllGoogleBusinessProviders = { GoogleMapBusiness, GoogleMapSateliteBusiness, GoogleMapHybridBusiness, GoogleMapTerrainBusiness };
 
         /// <summary>

@@ -19,6 +19,9 @@ namespace GMap.NET.MapProviders.Google.Business
 
     #region Other Google Map-Types wrapped as providers
 
+    /// <summary>
+    /// Google Maps Business Satelite Map Provider
+    /// </summary>
     public class GoogleSateliteMapBusinessProvider : GoogleMapBusinessProvider
     {
         public new static readonly GoogleSateliteMapBusinessProvider Instance = new GoogleSateliteMapBusinessProvider();
@@ -42,6 +45,9 @@ namespace GMap.NET.MapProviders.Google.Business
 
     }
 
+    /// <summary>
+    /// Google Maps Business Hybrid Map Provider
+    /// </summary>
     public class GoogleHybridMapBusinessProvider : GoogleMapBusinessProvider
     {
         public new static readonly GoogleHybridMapBusinessProvider Instance = new GoogleHybridMapBusinessProvider();
@@ -64,6 +70,9 @@ namespace GMap.NET.MapProviders.Google.Business
         }
     }
 
+    /// <summary>
+    /// Google Maps Business Terrain Map Provider
+    /// </summary>
     public class GoogleTerrainMapBusinessProvider : GoogleMapBusinessProvider
     {
         public new static readonly GoogleTerrainMapBusinessProvider Instance = new GoogleTerrainMapBusinessProvider();

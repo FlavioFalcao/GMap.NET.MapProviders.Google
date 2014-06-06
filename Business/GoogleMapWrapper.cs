@@ -5,17 +5,29 @@ using Google.Maps.Geocoding;
 
 namespace GMap.NET.MapProviders.Google.Business
 {
+    /// <summary>
+    /// Contains static wrapper methods to convert between
+    /// GMaps values and Google.Map values
+    /// </summary>
     internal static class GoogleMapWrapper
     {
 
-
+        /// <summary>
+        /// Wrapps the given coordinates to GMap
+        /// </summary>
+        /// <param name="coord"></param>
+        /// <returns></returns>
         public static PointLatLng ToPointLatLng(LatLng coord)
         {
             return new PointLatLng(coord.Latitude, coord.Longitude);
         }
 
 
-
+        /// <summary>
+        /// Wraps the Google status codes to GMap status codes
+        /// </summary>
+        /// <param name="status"></param>
+        /// <returns></returns>
         public static GeoCoderStatusCode ToGeoCoderStatusCode(ServiceResponseStatus status)
         {
             switch (status)
@@ -43,6 +55,11 @@ namespace GMap.NET.MapProviders.Google.Business
             }
         }
 
+        /// <summary>
+        /// Wraps the location type accuracy into a generic float value [0.0 - 1.0]
+        /// </summary>
+        /// <param name="locationType"></param>
+        /// <returns></returns>
         public static float ToAccuracyValue(LocationType locationType)
         {
             switch (locationType)
@@ -68,7 +85,11 @@ namespace GMap.NET.MapProviders.Google.Business
         }
 
 
-
+        /// <summary>
+        /// Wraps a Google Result into a Placemark
+        /// </summary>
+        /// <param name="result"></param>
+        /// <returns></returns>
         public static Placemark ToPlacemark(Result result)
         {
             var placemark = new Placemark
@@ -85,6 +106,12 @@ namespace GMap.NET.MapProviders.Google.Business
         }
 
 
+        /// <summary>
+        /// Finds a part from address component
+        /// </summary>
+        /// <param name="components"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
         private static string FindAddressPart(IEnumerable<AddressComponent> components, AddressType type)
         {
             return (from component in components
